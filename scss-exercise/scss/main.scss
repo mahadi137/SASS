@@ -1,0 +1,107 @@
+@import "initial";
+@import "variable";
+
+@mixin height_margin {
+  height: auto;
+  margin: 0 auto;
+}
+
+body {
+  width: $myWidth;
+  @include height_margin;
+  font-family: "Merriweather", sans-serif;
+  font-size: $myFontSize;
+  font-weight: 400;
+  color: $fontColor_b;
+  background-color: $backColor_1;
+}
+
+/* Top Container */
+
+.top-container {
+  height: 110px;
+
+  .headersection {
+    float: left;
+    height: 95px;
+    margin-top: 16px;
+  }
+
+  h1 {
+    color: $fontColor_y;
+    padding: 25px 30px;
+    font-size: 40px;
+    font-weight: 900;
+  }
+}
+
+.navsection {
+  float: right;
+  margin-top: 55px;
+  margin-right: 30px;
+
+  nav ul {
+    li {
+      @extend p;
+      display: inline-block;
+      color: $fontColor_b;
+      padding: 14px 16px 2px 16px;
+      font-size: 17px;
+      border-bottom: 3px solid transparent;
+    }
+    a {
+      text-decoration: none;
+      color: $fontColor_b;
+    }
+    a:hover {
+      color: $fontColor_y;
+    }
+  }
+}
+
+/* Middle Container */
+
+h2 {
+  margin: 40px auto 20px;
+  font-style: italic;
+  color: $fontColor_h2;
+}
+
+p {
+  text-align: justify;
+  line-height: 36px;
+}
+
+.middle-container {
+  width: 90%;
+  @include height_margin;
+}
+
+.middle-container-div {
+  a {
+    font-size: 20px;
+    font-weight: 900;
+    float: right;
+    padding: 5px;
+    color: $fontColor_y;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $fontColor_r;
+  }
+}
+
+/* Gallary Container */
+
+.gallary-container {
+  margin-bottom: 30px;
+}
+.gallary-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  img {
+    width: 300px;
+    height: 200px;
+  }
+}
